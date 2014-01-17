@@ -1,0 +1,9 @@
+<form method="post" action="search.php">
+<input type="text" name="keyword" />
+<input type="submit" value="search">
+</form>
+function search()
+{
+$search=$_POST['keyword'];
+$ab=select song.name from songs where song.artist=$search or song.md=$search or song.name=$search ;
+}
